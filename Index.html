@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .btn-45 {
+    position: relative;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+    border: solid 0px;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    /*** full width block ***/
+    /* width: 100%; */
+}
+
+.btn-45 {
+    --thickness: 4px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% + var(--thickness)),  0 calc(100% + var(--thickness)));
+    -webkit-mask-image: none;
+}
+
+.btn-45-colors {
+    background:transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-45:before {
+    background: #ffffff;
+    bottom: calc(var(--thickness) * -1);
+    content: "";
+    display: block;
+    height: var(--thickness);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.btn-45:hover:before {
+    animation: slide-45 0.5s ease;
+}
+
+.btn-45:disabled {
+    pointer-events: none;
+    opacity: .65;
+    color: #7e7e7e;
+    background: #dcdcdc;
+}
+
+.btn-45:disabled:before {
+    background: #c2bebe;
+}
+
+@keyframes slide-45 {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    51% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+    #Botones{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 50px;
+
+    }
+    button{
+        color: white;
+    }
+    
+    p {
+        font-style: italic;
+        color: rgb(255, 255, 255);
+        background-color: blueviolet;
+    }
+    body {
+        background-image: url(https://64.media.tumblr.com/e104ecc677b5a46158e78a3df6dfc198/975f626ce3483b9d-e1/s2048x3072/b3abc89a4d69153ac4110ce5a1815099d4ad30dc.jpg);
+        background-color: blueviolet;
+    }
+    a {
+display: block;
+
+    }
+video {
+    width: 80px;
+    display: inline;
+}
+h1 {
+    color: blueviolet;
+}
+img {
+    width: 100px;
+}
+</style>
+</head>
+<body>
+    
+
+<div id="Botones">
+    <a href="Investigadores.html">
+      <button class="btn-45 btn-45-colors">Conocenos</button>
+    </a>
+<a href="Proyecto.html">
+<button class="btn-45 btn-45-colors">
+Proyecto
+</button>
+</a>
+
+</div>
+<h1>Supernova</h1> 
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eum modi iusto molestiae error, dolore non quo facere. Obcaecati ipsam ab voluptate, eos magnam error molestias ipsum deleniti illo soluta.</p>
+
+<a href="Segundo.html">link</a>
+
+<img src="https://64.media.tumblr.com/3f13acb2853a82b91a0f070e4ffc340e/9339708290e3a12a-a8/s1280x1920/a5e6db49cc3cf71a1e040627528f34d7b4acb349.jpg" alt="">
+</body>
+</html>
